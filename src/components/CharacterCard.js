@@ -3,17 +3,17 @@ import React from "react";
 
 const CharacterCard = (props) => {
   return (
-    // <Link to={`./cartoon/${props.cartoon.id}`}>
-    <>
+    <div className="card">
       <img
         src={props.cartoon.image}
         alt={`Foto de ${props.cartoon.name}`}
         title={`Foto de ${props.cartoon.name}`}
       />
-      <h4>{props.cartoon.name}</h4>
-      <h3>{props.cartoon.species}</h3>
-    </>
-    // </Link>
+      <article>
+        <h4 className="name">{props.cartoon.name}</h4>
+        <h5 className="species">{props.cartoon.species}</h5>
+      </article>
+    </div>
   );
 };
 

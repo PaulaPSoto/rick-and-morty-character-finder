@@ -4,6 +4,8 @@ import Filters from "./FilterByName";
 import CharacterList from "./CharacterList";
 import CaracterDetail from "./CaracterDetail";
 import getDataFromApi from "../services/getDataFromApi";
+import "../stylesheets/index.css";
+import logo from "../images/logo.png";
 
 console.log("app", getDataFromApi());
 
@@ -43,6 +45,7 @@ const App = () => {
 
   return (
     <div>
+      <img className="logo" src={logo} alt="logo" title="logo de la serie" />
       <Switch>
         <Route path="/" exact>
           <Filters handleFilter={handleFilter} />

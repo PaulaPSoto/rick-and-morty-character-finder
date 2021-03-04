@@ -4,7 +4,7 @@ const CharacterList = (props) => {
   const uElements = props.cartoons.map((cartoon) => {
     return (
       <li key={cartoon.id}>
-        <Link to={`/cartoon/${cartoon.id}`}>
+        <Link className="link" to={`/cartoon/${cartoon.id}`}>
           <CharacterCard cartoon={cartoon} />
         </Link>
       </li>
@@ -13,7 +13,7 @@ const CharacterList = (props) => {
 
   return (
     <section>
-      <ul>{uElements}</ul>
+      <ul className="list">{uElements}</ul>
     </section>
   );
 };

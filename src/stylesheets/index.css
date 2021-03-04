@@ -1,0 +1,40 @@
+.logo {
+  text-align: center;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  list-style-type: none;
+}
+.card {
+  border-radius: 10px;
+  border: 1px solid #000000;
+  background-color: yellow;
+  text-transform: capitalize;
+}
+.cardDetail {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000000;
+  background-color: yellow;
+  text-transform: capitalize;
+}
+.name {
+  color: ;
+  text-align: center;
+  font-weight: bold;
+}
+.species {
+  text-align: center;
+}
+.link {
+  text-decoration: none;
+  color: azure;
+}
+.return {
+  border-radius: 10px;
+  background-color: pink;
+}
