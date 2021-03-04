@@ -4,6 +4,7 @@
      .then(response => response.json())
       .then(data => {
          return data.results.map((cartoon) => {
+           console.log("data", data);
            return {
                id: cartoon.id,
                name: cartoon.name,
