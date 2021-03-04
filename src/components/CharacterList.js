@@ -1,6 +1,9 @@
 import CharacterCard from "./CharacterCard";
+import CartoonNotFound from "./CartoonNotFound";
 import { Link } from "react-router-dom";
+
 const CharacterList = (props) => {
+  console.log("Proops.cartoon", props.cartoons);
   const uElements = props.cartoons.map((cartoon) => {
     return (
       <li key={cartoon.id}>
@@ -10,12 +13,15 @@ const CharacterList = (props) => {
       </li>
     );
   });
-
-  return (
-    <section>
-      <ul className="list">{uElements}</ul>
-    </section>
-  );
+  if (props.cartoons.length === 0) {
+    return <CartoonNotFound />;
+  } else {
+    return (
+      <section>
+        <ul className="list">{uElements}</ul>
+      </section>
+    );
+  }
 };
 
 export default CharacterList;

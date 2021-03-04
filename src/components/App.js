@@ -18,10 +18,6 @@ const App = () => {
   }, []);
 
   const handleFilter = (inputChange) => {
-    console.log(
-      "el objeto o mensaje que le llega a App desde fiterByName",
-      inputChange
-    );
     if (inputChange.key === "name") {
       setName(inputChange.value);
     }
@@ -37,7 +33,7 @@ const App = () => {
     const cartoonFound = cartoons.find(
       (cartoon) => cartoon.id === routerCartoonId
     );
-    console.log("console", routerProps.match.params.id);
+
     if (cartoonFound) {
       return <CaracterDetail cartoon={cartoonFound} />;
     }
