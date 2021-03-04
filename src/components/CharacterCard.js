@@ -1,9 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const CharacterCard = (props) => {
   return (
-    <Link to={`/cartoon/${props.cartoon.id}`}>
+    // <Link to={`./cartoon/${props.cartoon.id}`}>
+    <>
       <img
         src={props.cartoon.image}
         alt={`Foto de ${props.cartoon.name}`}
@@ -11,7 +12,8 @@ const CharacterCard = (props) => {
       />
       <h4>{props.cartoon.name}</h4>
       <h3>{props.cartoon.species}</h3>
-    </Link>
+    </>
+    // </Link>
   );
 };
 

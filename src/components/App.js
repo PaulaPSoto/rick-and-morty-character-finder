@@ -29,20 +29,26 @@ const App = () => {
     return cartoon.name.toUpperCase().includes(name.toUpperCase());
   });
 
-  const renderDetail = (props) => {
-    const id = props.match.params.id;
-    const selectCartoon = cartoons.find((cartoon) => {
-      return cartoon.id === id;
-    });
-    return <CaracterDetail cartoon={selectCartoon} />;
+  const renderDetail = (routerProps) => {
+    console.log("Id del producto de la ruta", routerProps.match.params.id);
+    const routerCartoonId = parseInt(routerProps.match.params.id);
+    const cartoonFound = cartoons.find(
+      (cartoon) => cartoon.id === routerCartoonId
+    );
+    console.log("console", routerProps.match.params.id);
+    if (cartoonFound) {
+      return <CaracterDetail cartoon={cartoonFound} />;
+    }
   };
 
   return (
     <div>
-      <Filters handleFilter={handleFilter} />
-      <CharacterList cartoons={filterCartoons} />
       <Switch>
-        <Route path="cartoon/:id" render={renderDetail} />
+        <Route path="/" exact>
+          <Filters handleFilter={handleFilter} />
+          <CharacterList cartoons={filterCartoons} />
+        </Route>
+        <Route path="/cartoon/:id" render={renderDetail} />
       </Switch>
     </div>
   );
