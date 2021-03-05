@@ -14,8 +14,11 @@ const App = () => {
   const [cartoons, setCartoons] = useState([]);
   const [name, setName] = useState("");
   const [species, setSpecies] = useState("");
+
+  //loading true o false
   useEffect(() => {
     getDataFromApi().then((data) => setCartoons(data));
+    // setLoading(false);
   }, []);
 
   const handleFilter = (inputChange) => {
@@ -53,7 +56,11 @@ const App = () => {
       <Switch>
         <Route path="/" exact>
           <Filters handleFilter={handleFilter} filterByName={name} />
-          <CharacterList cartoons={filterCartoons} />
+          <CharacterList
+            // loading={loading}
+            cartoons={filterCartoons}
+            filterByName={name}
+          />
         </Route>
         <Route path="/cartoon/:id" render={renderDetail} />
       </Switch>

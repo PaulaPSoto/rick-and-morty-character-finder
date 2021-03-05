@@ -12,6 +12,7 @@ const CharacterCard = (props) => {
       <article>
         <h4 className="name">{props.cartoon.name}</h4>
         <h5 className="species">{props.cartoon.species}</h5>
+        <h5 className="species">{props.cartoon.status}</h5>
       </article>
     </div>
   );

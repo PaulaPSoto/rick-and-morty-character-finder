@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 const CaracterDetail = (props) => {
+  console.log("propsdetaile", props);
   return (
     <div>
       <span className="return">
