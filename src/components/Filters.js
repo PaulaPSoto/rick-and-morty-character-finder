@@ -1,12 +1,14 @@
-import FilterByName from './FilterByName';
+import FilterByName from "./FilterByName";
+import FilterBySpecies from "./FilterBySpecies";
 
-const Filters = props =>{
-    return (
-      <section>
+const Filters = (props) => {
+  return (
+    <section>
       <form>
-        <FilterByName handleFilter = {props.handleFilter}/>
+        <FilterByName handleFilter={props.handleFilter} />
+        <FilterBySpecies handleFilter={props.handleFilter} />
       </form>
     </section>
-    )
-  }
-  export default Filters;
+  );
+};
+export default Filters;

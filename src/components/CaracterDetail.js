@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 const CaracterDetail = (props) => {
   return (
     <div>
-      <span className="return">Volver</span>
+      <span className="return">
+        <a href="/">Volver</a>
+      </span>
+
       <div>
         <article className="cardDetail">
           <img
