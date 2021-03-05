@@ -8,7 +8,7 @@ import getDataFromApi from "../services/getDataFromApi";
 import "../stylesheets/index.css";
 import logo from "../images/logo.png";
 
-// console.log("app", getDataFromApi());
+console.log("app", getDataFromApi());
 
 const App = () => {
   const [cartoons, setCartoons] = useState([]);
@@ -27,13 +27,13 @@ const App = () => {
     }
   };
 
-  const filterCartoons = cartoons.filter((cartoon) => {
-    return cartoon.name.toUpperCase().includes(name.toUpperCase());
-  });
-
-  const filterSpecies = cartoons.filter((cartoon) => {
-    return cartoon.species.toUpperCase().includes(species.toUpperCase());
-  });
+  const filterCartoons = cartoons
+    .filter((cartoon) => {
+      return cartoon.name.toUpperCase().includes(name.toUpperCase());
+    })
+    .filter((cartoon) => {
+      return cartoon.species.toUpperCase().includes(species.toUpperCase());
+    });
 
   const renderDetail = (routerProps) => {
     console.log("Id del producto de la ruta", routerProps.match.params.id);
@@ -52,8 +52,8 @@ const App = () => {
       <img className="logo" src={logo} alt="logo" title="logo de la serie" />
       <Switch>
         <Route path="/" exact>
-          <Filters handleFilter={handleFilter} />
-          <CharacterList cartoons={filterCartoons} species={filterSpecies} />
+          <Filters handleFilter={handleFilter} filterByName={name} />
+          <CharacterList cartoons={filterCartoons} />
         </Route>
         <Route path="/cartoon/:id" render={renderDetail} />
       </Switch>

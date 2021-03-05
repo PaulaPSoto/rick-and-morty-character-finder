@@ -4,7 +4,7 @@ const CaracterDetail = (props) => {
   return (
     <div>
       <span className="return">
-        <a href="/">Volver</a>
+        <Link to="/">Volver</Link>
       </span>
 
       <div>
