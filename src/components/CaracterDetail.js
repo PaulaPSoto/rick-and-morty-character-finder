@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 const CaracterDetail = (props) => {
-  console.log("propsdetaile", props);
   return (
     <div>
       <span className="return">
-        <Link to="/">Volver</Link>
+        <Link className="link" to="/">
+          {" "}
+          {"\u003c"} Volver{" "}
+        </Link>
       </span>
 
       <div>
@@ -16,10 +18,12 @@ const CaracterDetail = (props) => {
             alt={`Foto de ${props.cartoon.name}`}
             title={`Foto de ${props.cartoon.name}`}
           />
-          <h2 className="name">{props.cartoon.name}</h2>
-          <h2>Status:{props.cartoon.status}</h2>
-          <h2>Origin:{props.cartoon.origin}</h2>
-          <h2>Episodes{props.cartoon.episode}</h2>
+          <div className="cartoonDetailText">
+            <h4>{props.cartoon.name}</h4>
+            <p className="nameD">Status: {props.cartoon.status}</p>
+            <p className="nameD">Origin: {props.cartoon.origin}</p>
+            <p className="nameD">Episodes: {props.cartoon.episode}</p>
+          </div>
 
           <Link to="/">
             <span></span>

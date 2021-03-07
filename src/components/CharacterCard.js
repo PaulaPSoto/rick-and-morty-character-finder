@@ -5,21 +5,22 @@ const CharacterCard = (props) => {
   return (
     <div className="card">
       <img
+        className="photo"
         src={props.cartoon.image}
         alt={`Foto de ${props.cartoon.name}`}
         title={`Foto de ${props.cartoon.name}`}
       />
       <article>
         <h4 className="name">{props.cartoon.name}</h4>
-        <h5 className="species">{props.cartoon.species}</h5>
+        <p className="species">{props.cartoon.species}</p>
         {isDead === "Dead" ? (
           <>
-            <h5 className="species">
+            <p className="species">
               {props.cartoon.status} <i className="fas fa-skull myicon"></i>
-            </h5>
+            </p>
           </>
         ) : (
-          <h5 className="species">{props.cartoon.status}</h5>
+          <p className="species">{props.cartoon.status}</p>
         )}
       </article>
     </div>

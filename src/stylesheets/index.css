@@ -1,19 +1,32 @@
 * {
   box-sizing: border-box;
 }
-
+.bigheader {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.sectionLook {
+  width: auto;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .logo {
-  text-align: center;
-  width: px;
+  width: 40%;
 }
 .form {
-  color: palevioletred;
+  color: white;
+  margin: 10px;
 }
 .textnot {
   color: palevioletred;
 }
 .input {
   display: block;
+  margin: 10px;
 }
 .list {
   display: grid;
@@ -27,33 +40,53 @@
   background-color: yellow;
   text-transform: capitalize;
 }
-.cartoonImg {
+.photo {
   display: block;
-  margin: auto;
+  margin: 10px;
 }
 .cardDetail {
-  display: flex;
-  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  width: 30%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
   border: 1px solid #000000;
   background-color: yellow;
   text-transform: capitalize;
 }
 .name {
-  color: palevioletred;
+  color: black;
   text-align: center;
   font-weight: bold;
 }
+.nameD {
+  text-align: right;
+  font-size: 11px;
+  color: black;
+  text-align: start;
+  font-weight: bold;
+}
 .species {
-  color: palevioletred;
+  color: black;
   text-align: center;
+}
+.cartoonImg {
+  margin: 10px;
+  width: 90%;
+}
+.cartoonDetailText {
+  margin-top: 20%;
+  text-align: left;
 }
 .link {
   text-decoration: none;
   color: azure;
 }
 .return {
-  border-radius: 10px;
-  background-color: pink;
+  padding: 10px;
 }
 .footer {
   width: 100%;
@@ -68,26 +101,6 @@
   text-decoration: none;
 }
 
-.bigheader {
-  width: 100%;
-  background: #393b3b;
-  display: flex;
-  justify-content: space-around;
-  border-radius: 5px;
-  align-items: center;
-}
-
-.text1 {
-  font-size: 15px;
-  font-weight: lighter;
-  color: #d7f7fe;
-}
-
-.text2 {
-  color: #d7f7fe;
-  font-size: 18px;
-  font-weight: lighter;
-}
 .myicon {
   text-align: center;
   color: black;

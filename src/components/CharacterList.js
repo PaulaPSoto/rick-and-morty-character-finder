@@ -1,10 +1,7 @@
 import CharacterCard from "./CharacterCard";
-
 import { Link } from "react-router-dom";
 
 const CharacterList = (props) => {
-  console.log("Proops.cartoon", props.cartoons);
-
   const uElements = props.cartoons.map((cartoon) => {
     return (
       <li key={cartoon.id}>
@@ -19,13 +16,12 @@ const CharacterList = (props) => {
     return (
       <section>
         <p className="textnot">
-          No hay ningún personaje que coincida con la palabra
+          No hay ningún personaje que coincida con la palabra{" "}
           {props.filterByName}
         </p>
       </section>
     );
   } else {
-    console.log("llen000");
     return (
       <section>
         <ul className="list">{uElements}</ul>

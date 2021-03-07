@@ -1,5 +1,4 @@
 const FilterByName = (props) => {
-  console.log(props.filterByName);
   const handleChange = (e) => {
     props.handleFilter({
       key: "name",
