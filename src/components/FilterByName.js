@@ -13,8 +13,11 @@ const FilterByName = (props) => {
 
   return (
     <form onSubmit={handleForm}>
-      <label htmlFor="name">Filtrar por nombre:</label>
+      <label className="form" htmlFor="name">
+        Filtrar por nombre:
+      </label>
       <input
+        className="input"
         value={props.filterByName}
         type="text"
         name="name"

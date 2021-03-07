@@ -11,6 +11,7 @@ const CaracterDetail = (props) => {
       <div>
         <article className="cardDetail">
           <img
+            className="cartoonImg"
             src={props.cartoon.image}
             alt={`Foto de ${props.cartoon.name}`}
             title={`Foto de ${props.cartoon.name}`}

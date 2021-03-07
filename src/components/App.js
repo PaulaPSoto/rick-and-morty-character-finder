@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import Header from "./Header";
+import Footer from "./Footer";
 import { Route, Switch } from "react-router-dom";
 import Filters from "./Filters";
 import CharacterList from "./CharacterList";
@@ -52,9 +54,16 @@ const App = () => {
 
   return (
     <div>
-      <img className="logo" src={logo} alt="logo" title="logo de la serie" />
+      <Header />
+
       <Switch>
         <Route path="/" exact>
+          <img
+            className="logo"
+            src={logo}
+            alt="logo"
+            title="logo de la serie"
+          />
           <Filters handleFilter={handleFilter} filterByName={name} />
           <CharacterList
             // loading={loading}
@@ -64,6 +73,7 @@ const App = () => {
         </Route>
         <Route path="/cartoon/:id" render={renderDetail} />
       </Switch>
+      <Footer />
     </div>
   );
 };

@@ -1,7 +1,20 @@
-.logo {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
+.logo {
+  text-align: center;
+  width: px;
+}
+.form {
+  color: palevioletred;
+}
+.textnot {
+  color: palevioletred;
+}
+.input {
+  display: block;
+}
 .list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -10,10 +23,13 @@
   list-style-type: none;
 }
 .card {
-  border-radius: 10px;
   border: 1px solid #000000;
   background-color: yellow;
   text-transform: capitalize;
+}
+.cartoonImg {
+  display: block;
+  margin: auto;
 }
 .cardDetail {
   display: flex;
@@ -23,11 +39,12 @@
   text-transform: capitalize;
 }
 .name {
-  color: ;
+  color: palevioletred;
   text-align: center;
   font-weight: bold;
 }
 .species {
+  color: palevioletred;
   text-align: center;
 }
 .link {
@@ -37,4 +54,41 @@
 .return {
   border-radius: 10px;
   background-color: pink;
+}
+.footer {
+  width: 100%;
+  height: 4rem;
+  color: #d7f7fe;
+  text-align: center;
+  font-size: 13px;
+  background-color: #099d8d;
+}
+.link {
+  color: #d7f7fe;
+  text-decoration: none;
+}
+
+.bigheader {
+  width: 100%;
+  background: #393b3b;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.text1 {
+  font-size: 15px;
+  font-weight: lighter;
+  color: #d7f7fe;
+}
+
+.text2 {
+  color: #d7f7fe;
+  font-size: 18px;
+  font-weight: lighter;
+}
+.myicon {
+  text-align: center;
+  color: black;
 }

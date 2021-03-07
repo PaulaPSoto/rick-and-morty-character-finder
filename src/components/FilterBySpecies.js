@@ -10,8 +10,16 @@ const FilterBySpecies = (props) => {
   };
   return (
     <form onSubmit={handleForm}>
-      <label htmlFor="species">Filtrar por especie:</label>
-      <input type="text" name="species" id="species" onChange={handleChange} />
+      <label className="form" htmlFor="species">
+        Filtrar por especie:
+      </label>
+      <input
+        className="input"
+        type="text"
+        name="species"
+        id="species"
+        onChange={handleChange}
+      />
     </form>
   );
 };
